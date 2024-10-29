@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang ="en"> 
+    <head>
+        <meta charset ="UTF-8">
+        <meta name ="viewport" content ="width-device-width , initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+       <title> TaskRabbit</title>
+    </head>
+    <body>
+        <h1> Task Rabbit</h1>
+        <div id="auth">
+            <h2> Register</h2>
+            <form id="registerForms">
+                <input type="text" name="username" placeholder ="username" required>
+                <input type="email" name="email" placeholder ="Email" required>
+                <input type="password" name="password" placeholder ="Password" required>
+            </form>
+        </div>
+        <div id ="tasks">
+            <h2> Your Tasks</h2>
+            <form id="taskForm">
+                <input type="text" name="title" placeholder ="Task Title" required>
+                <input type="text" name="description" placeholder ="Description" >
+                <input type="date" name="dueDate" >
+                <button type ="submit">Add Task</button>
+            </form>
+        </div>
+        <script  src="script.js"></script>
+    </body>
+</html>

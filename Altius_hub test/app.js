@@ -1,0 +1,16 @@
+const express= require('express');
+const mongoose =require('mongoose');
+const dotenv= require('dotenv');
+const cors=require('cors');
+const authroutes =require('./routes/auth');
+const taskroutes=require('./routes/tasks');
+dotenv.config();
+const app=express();
+app.use(cors());
+app.use(express.json());
+app.use('uploads',express.static('uploads'));
+mongoose.connect(process.env.MONGODB_URI,{userNewUrlParser:true,useunifiedTopology:true});
+app.use('/api/auth',authRoutes);
+app.use('/api/tasks',taskRoutes);
+const PORT= process.env.PORT||5000;
+app.listen(PORT,()=>console.log('server running on port ${PORT}'));
